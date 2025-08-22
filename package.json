@@ -1,0 +1,43 @@
+{
+  "name": "shopify-theme-dev",
+  "version": "1.0.0",
+  "description": "Shopify theme with modern development tools",
+  "main": "index.js",
+  "scripts": {
+    "dev": "shopify theme dev --store hungle-test.myshopify.com --open",
+    "pull": "shopify theme pull --store hungle-test.myshopify.com",
+    "push": "shopify theme push --store hungle-test.myshopify.com",
+    "push:unpublished": "shopify theme push --store hungle-test.myshopify.com --unpublished",
+    "build": "echo 'Build process - add your build tools here'",
+    "watch": "shopify theme dev --store hungle-test.myshopify.com",
+    "deploy": "shopify theme push --store hungle-test.myshopify.com --live",
+    "lint": "eslint assets/**/*.js",
+    "lint:fix": "eslint assets/**/*.js --fix",
+    "format": "prettier --write '**/*.{js,css,liquid,json}' --ignore-path .shopifyignore",
+    "format:check": "prettier --check '**/*.{js,css,liquid,json}' --ignore-path .shopifyignore",
+    "list-theme-files": "find . -type f \\( -name '*.liquid' -o -name '*.css' -o -name '*.js' -o -name '*.json' \\) ! -path './node_modules/*' ! -path './.git/*' ! -name 'package*.json' | sort",
+    "theme:info": "shopify theme info --store hungle-test.myshopify.com",
+    "theme:list": "shopify theme list --store hungle-test.myshopify.com"
+  },
+  "keywords": [
+    "shopify",
+    "theme",
+    "liquid",
+    "ecommerce"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "eslint": "^8.0.0",
+    "sass": "^1.60.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "postcss-cli": "^10.1.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
